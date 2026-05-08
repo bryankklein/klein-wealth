@@ -10,7 +10,6 @@ export default function HomePage() {
       <main>
         <Hero />
         <FiduciaryPromise />
-        <DetailPhoto />
         <HowWeWork />
         <RecentInsights />
       </main>
@@ -66,7 +65,7 @@ function Hero() {
 
 function FiduciaryPromise() {
   return (
-    <section className="py-16 lg:py-20 bg-background">
+    <section className="py-10 lg:py-14 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-4">
@@ -78,37 +77,33 @@ function FiduciaryPromise() {
             </h2>
           </div>
 
-          <div className="lg:col-span-8 space-y-4 text-foreground/80 leading-relaxed text-[15px]">
-            <p>
-              In an industry often driven by commissions and product sales, we
-              chose a different path. As a fee-only fiduciary, I am legally and
-              ethically bound to act in your best interest — not the interest
-              of a brokerage, insurance company, or fund manager.
-            </p>
-            <p>
-              This means no hidden fees, no conflicted advice, and no pressure
-              to buy products you don&apos;t need. Just clear, honest guidance
-              designed to help you build and preserve wealth on your own terms.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+          <div className="lg:col-span-8 space-y-10 lg:space-y-12">
+            <div className="space-y-4 text-foreground/80 leading-relaxed text-[15px]">
+              <p>
+                In an industry often driven by commissions and product sales,
+                we chose a different path. As a fee-only fiduciary, I am
+                legally and ethically bound to act in your best interest — not
+                the interest of a brokerage, insurance company, or fund
+                manager.
+              </p>
+              <p>
+                This means no hidden fees, no conflicted advice, and no
+                pressure to buy products you don&apos;t need. Just clear,
+                honest guidance designed to help you build and preserve wealth
+                on your own terms.
+              </p>
+            </div>
 
-function DetailPhoto() {
-  return (
-    <section className="py-16 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex justify-end">
-          <div className="relative w-full max-w-md aspect-[4/3]">
-            <Image
-              src="/images/detail.jpg"
-              alt="Fountain pen resting on an open notebook"
-              fill
-              className="object-cover"
-            />
+            <div className="flex justify-end">
+              <div className="relative w-full max-w-md aspect-[4/3]">
+                <Image
+                  src="/images/detail.jpg"
+                  alt="Fountain pen resting on an open notebook"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -145,7 +140,7 @@ function HowWeWork() {
   ];
 
   return (
-    <section className="py-20 lg:py-24 border-t border-border/50">
+    <section className="py-14 lg:py-20 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-12 lg:mb-16">
           <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
@@ -156,9 +151,9 @@ function HowWeWork() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
+        <div className="grid md:grid-cols-3 gap-10 lg:gap-12 items-stretch">
           {steps.map((step) => (
-            <div key={step.number}>
+            <div key={step.number} className="flex flex-col h-full">
               <span className="font-mono text-accent text-sm tracking-wider mb-3 block">
                 {step.number}
               </span>
@@ -168,7 +163,7 @@ function HowWeWork() {
               <p className="text-foreground/80 leading-relaxed text-[15px] mb-6">
                 {step.description}
               </p>
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-[4/3] w-full mt-auto">
                 <Image
                   src={step.image}
                   alt={step.alt}
@@ -210,9 +205,9 @@ function RecentInsights() {
   ];
 
   return (
-    <section className="py-24 lg:py-32 border-t border-border/50">
+    <section className="py-14 lg:py-20 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-16 lg:mb-20">
+        <div className="flex items-end justify-between mb-12 lg:mb-16">
           <div>
             <p className="text-accent text-xs tracking-[0.15em] uppercase mb-4">
               From the Blog

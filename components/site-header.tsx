@@ -25,12 +25,12 @@ export function SiteHeader() {
             Klein Wealth Management
           </Link>
 
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm text-foreground hover:text-accent transition-colors"
+                  className="text-sm text-foreground hover:text-ink hover:bg-muted px-3 py-2 transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -73,12 +73,12 @@ export function SiteHeader() {
         </div>
 
         {open && (
-          <ul id="mobile-nav" className="md:hidden pb-6 pt-2 space-y-4">
+          <ul id="mobile-nav" className="md:hidden pb-6 pt-2 space-y-1">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block text-base text-foreground hover:text-accent transition-colors"
+                  className="block text-base text-foreground hover:text-ink hover:bg-muted px-3 py-3 transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
