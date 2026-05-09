@@ -46,20 +46,20 @@ function PrimaryBio() {
     <section className="py-10 lg:py-14 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-3">
             <div className="relative aspect-[4/5] w-full">
               <Image
                 src="/images/bryan.jpg"
                 alt="Bryan Klein, founder of Klein Wealth Management"
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 100vw"
+                sizes="(min-width: 1024px) 25vw, 100vw"
                 priority
               />
             </div>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-9">
             <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
               Principal Wealth Advisor, CFP® Professional
             </p>
@@ -120,19 +120,19 @@ function SecondaryBio() {
     <section className="py-10 lg:py-14 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-2">
             <div className="relative aspect-[4/5] w-full">
               <Image
-                src="/images/noah.JPG"
+                src="/images/noah.jpg"
                 alt="Noah Strunk, Wealth Advisor at Klein Wealth Management"
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 33vw, 100vw"
+                sizes="(min-width: 1024px) 17vw, 100vw"
               />
             </div>
           </div>
 
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-10">
             <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
               Wealth Advisor, CFP®, MBA
             </p>
