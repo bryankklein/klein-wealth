@@ -61,7 +61,7 @@ function PrimaryBio() {
 
           <div className="lg:col-span-9">
             <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
-              Principal Wealth Advisor, CFP® Professional
+              Principal Wealth Advisor, CFP® Professional, M.S.
             </p>
             <h2 className="font-serif font-light text-3xl lg:text-4xl text-ink mb-6 leading-[1.15] tracking-[0.01em]">
               Bryan Klein
@@ -120,21 +120,21 @@ function SecondaryBio() {
     <section className="py-10 lg:py-14 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <div className="relative aspect-[4/5] w-full">
               <Image
                 src="/images/noah.jpg"
                 alt="Noah Strunk, Wealth Advisor at Klein Wealth Management"
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 17vw, 100vw"
+                sizes="(min-width: 1024px) 25vw, 100vw"
               />
             </div>
           </div>
 
-          <div className="lg:col-span-10">
+          <div className="lg:col-span-9">
             <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
-              Wealth Advisor, CFP®, MBA
+              Wealth Advisor, CFP® Professional, MBA
             </p>
             <h2 className="font-serif font-light text-2xl lg:text-3xl text-ink mb-6 leading-[1.2] tracking-[0.01em]">
               Noah Strunk
