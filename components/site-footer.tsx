@@ -8,14 +8,22 @@ const navItems = [
 ];
 
 const complianceItems = [
-  { label: "CFP® Certification", href: "/disclosures" },
-  { label: "Form ADV", href: "/disclosures" },
-  { label: "Privacy Policy", href: "/disclosures" },
+  {
+    label: "CFP® Certification",
+    href: "https://www.cfp.net/verify-a-cfp-professional",
+    external: true,
+  },
+  {
+    label: "Form ADV",
+    href: "https://adviserinfo.sec.gov/firm/summary/307078",
+    external: true,
+  },
+  { label: "Privacy Policy", href: "/disclosures", external: false },
 ];
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/50 py-16 lg:py-20">
+    <footer className="border-t border-border/50 py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           <div>
@@ -60,19 +68,33 @@ export function SiteFooter() {
             <ul className="space-y-3">
               {complianceItems.map((item) => (
                 <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-foreground/80 hover:text-accent transition-colors"
-                  >
-                    {item.label}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-foreground/80 hover:text-accent transition-colors inline-flex items-center"
+                    >
+                      {item.label}
+                      <span className="ml-1 text-xs" aria-hidden="true">
+                        ↗
+                      </span>
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-sm text-foreground/80 hover:text-accent transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border/30">
+        <div className="mt-10 pt-6 border-t border-border/30">
           <p className="text-muted-foreground text-xs">
             © {new Date().getFullYear()} Klein Wealth Management. All rights
             reserved.
