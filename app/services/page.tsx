@@ -29,7 +29,7 @@ export default function ServicesPage() {
 
 function PageIntro() {
   return (
-    <section className="pt-10 lg:pt-14 pb-6 lg:pb-8">
+    <section className="pt-6 lg:pt-8 pb-4 lg:pb-6">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-7">
@@ -54,7 +54,7 @@ function PageIntro() {
 
 function Approach() {
   return (
-    <section className="py-10 lg:py-14 border-t border-border/50">
+    <section className="py-6 lg:py-8 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-4">
@@ -122,7 +122,7 @@ function Process() {
   ];
 
   return (
-    <section className="py-10 lg:py-14 border-t border-border/50">
+    <section className="pt-6 lg:pt-8 pb-10 lg:pb-14 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-12 lg:mb-16 max-w-2xl">
           <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
@@ -202,9 +202,9 @@ function ServicePillars() {
   ];
 
   return (
-    <section className="py-10 lg:py-14 border-t border-border/50">
+    <section className="pt-6 lg:pt-8 pb-10 lg:pb-14 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-12 lg:mb-16">
+        <div className="mb-8 lg:mb-10">
           <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
             Services
           </p>
@@ -228,7 +228,7 @@ function ServicePillars() {
                 </h3>
               </div>
 
-              <div className="lg:col-span-8 text-foreground/80 leading-relaxed text-[15px]">
+              <div className="lg:col-span-8 lg:mt-8 text-foreground/80 leading-relaxed text-[15px]">
                 <p>{service.body}</p>
               </div>
             </div>

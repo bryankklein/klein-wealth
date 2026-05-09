@@ -78,17 +78,39 @@ function FiduciaryPromise() {
 
             <div className="mt-8 space-y-4 text-foreground/80 leading-relaxed text-[15px]">
               <p>
-                In an industry often driven by commissions and product sales,
-                we chose a different path. As a fee-only fiduciary, I am
-                legally and ethically bound to act in your best interest — not
-                the interest of a brokerage, insurance company, or fund
-                manager.
+                Doing the right thing is the only thing to do. In an industry
+                often driven by commissions and product sales, we chose a
+                different path — acting as fiduciaries on every piece of
+                financial advice we give, operating with transparency,
+                avoiding conflicts of interest, and putting the client first.
               </p>
+
+              <p>The tenets under which we operate:</p>
+
+              <ul className="space-y-3">
+                {[
+                  "As fiduciaries, we will put our clients' interests first, ahead of our own.",
+                  "We will avoid conflicts of interest whenever possible, and will disclose any unavoidable conflicts of interest should they arise.",
+                  "We will serve our clients with integrity, objectivity, honesty, and professionalism.",
+                  "We will provide full and fair disclosure of all fees charged to clients.",
+                  "We will provide our written privacy policy, code of ethics, business practices, and professional responsibilities.",
+                  "We will invest our own assets in the same portfolios that we recommend to clients.",
+                ].map((tenet) => (
+                  <li key={tenet} className="flex">
+                    <span
+                      className="mr-3 text-accent flex-shrink-0"
+                      aria-hidden="true"
+                    >
+                      —
+                    </span>
+                    <span>{tenet}</span>
+                  </li>
+                ))}
+              </ul>
+
               <p>
-                This means no hidden fees, no conflicted advice, and no
-                pressure to buy products you don&apos;t need. Just clear,
-                honest guidance designed to help you build and preserve wealth
-                on your own terms.
+                The result of our fiduciary promise is that we will act as
+                champions for our clients&apos; best interests.
               </p>
             </div>
           </div>
@@ -138,9 +160,9 @@ function HowWeWork() {
   ];
 
   return (
-    <section className="pt-14 lg:pt-20 pb-8 lg:pb-12 border-t border-border/50">
+    <section className="pt-8 lg:pt-12 pb-8 lg:pb-12 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-12 lg:mb-16">
+        <div className="mb-8 lg:mb-10">
           <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
             Our Process
           </p>

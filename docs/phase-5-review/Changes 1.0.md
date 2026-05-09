@@ -1,0 +1,2 @@
+image 1.2: two changes from this image on the services page. under the what we offer section, please tighten the upper padding and align the text on the right side with the larger wording on the let side so for comprehensive financial planning please align the paragraph on the right to align it at the top
+Image 1.3: on the services section and below it there are 4 different places where we need to tighten up the padding more.
