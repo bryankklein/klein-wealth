@@ -68,17 +68,15 @@ function FiduciaryPromise() {
     <section className="py-10 lg:py-14 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-7">
             <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
               Our Philosophy
             </p>
             <h2 className="font-serif font-light text-2xl lg:text-3xl text-ink leading-[1.2] tracking-[0.015em]">
               The Fiduciary Promise
             </h2>
-          </div>
 
-          <div className="lg:col-span-8 space-y-10 lg:space-y-12">
-            <div className="space-y-4 text-foreground/80 leading-relaxed text-[15px]">
+            <div className="mt-8 space-y-4 text-foreground/80 leading-relaxed text-[15px]">
               <p>
                 In an industry often driven by commissions and product sales,
                 we chose a different path. As a fee-only fiduciary, I am
@@ -93,16 +91,16 @@ function FiduciaryPromise() {
                 on your own terms.
               </p>
             </div>
+          </div>
 
-            <div className="flex justify-end">
-              <div className="relative w-full max-w-md aspect-[4/3]">
-                <Image
-                  src="/images/detail.jpg"
-                  alt="Fountain pen resting on an open notebook"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          <div className="lg:col-span-5">
+            <div className="relative aspect-[4/3] w-full">
+              <Image
+                src="/images/detail.jpg"
+                alt="Fountain pen resting on an open notebook"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -140,7 +138,7 @@ function HowWeWork() {
   ];
 
   return (
-    <section className="py-14 lg:py-20 border-t border-border/50">
+    <section className="pt-14 lg:pt-20 pb-8 lg:pb-12 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-12 lg:mb-16">
           <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
@@ -205,7 +203,7 @@ function RecentInsights() {
   ];
 
   return (
-    <section className="py-14 lg:py-20 border-t border-border/50">
+    <section className="pt-8 lg:pt-12 pb-14 lg:pb-20 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex items-end justify-between mb-12 lg:mb-16">
           <div>

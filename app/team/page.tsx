@@ -117,7 +117,7 @@ function PrimaryBio() {
 
 function SecondaryBio() {
   return (
-    <section className="py-10 lg:py-14 border-t border-border/50">
+    <section className="pt-10 lg:pt-14 pb-6 lg:pb-8 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-3">
@@ -209,7 +209,7 @@ function CfpCredentialBadge() {
 
 function ClosingCta() {
   return (
-    <section className="py-10 lg:py-14 border-t border-border/50">
+    <section className="py-6 lg:py-8 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <p className="font-serif font-light text-2xl lg:text-3xl text-ink leading-[1.2] tracking-[0.015em] mb-6">
