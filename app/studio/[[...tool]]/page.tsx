@@ -1,14 +1,11 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import config from '../../../sanity.config'
 
-// NextStudio touches `window` at import time, so we must skip SSR.
-const NextStudio = dynamic(
-  () => import('next-sanity/studio').then((mod) => mod.NextStudio),
-  { ssr: false },
-)
+// Studio touches `window` at module init. Keep all Sanity imports inside the
+// dynamic boundary so they don't load during SSR.
+const StudioMount = dynamic(() => import('./studio-mount'), {ssr: false})
 
 export default function StudioPage() {
-  return <NextStudio config={config} />
+  return <StudioMount />
 }
