@@ -2,8 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { client } from "@/sanity/lib/client";
+import { recentPostsQuery } from "@/sanity/lib/queries";
 
-export default function HomePage() {
+export const revalidate = 60;
+
+type RecentPost = {
+  _id: string;
+  title: string;
+  slug: string;
+  publishedAt: string;
+  excerpt?: string;
+};
+
+export default async function HomePage() {
+  const recentPosts = await client.fetch<RecentPost[]>(
+    recentPostsQuery,
+    {},
+    { next: { tags: ["post"] } },
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -11,7 +29,7 @@ export default function HomePage() {
         <Hero />
         <FiduciaryPromise />
         <HowWeWork />
-        <RecentInsights />
+        {recentPosts.length > 0 && <RecentInsights posts={recentPosts} />}
       </main>
       <SiteFooter />
     </div>
@@ -199,31 +217,14 @@ function HowWeWork() {
   );
 }
 
-function RecentInsights() {
-  const insights = [
-    {
-      date: "Apr 2026",
-      title: "The Quiet Power of Doing Nothing",
-      excerpt:
-        "In volatile markets, the most valuable thing an advisor can do is help you resist the urge to act. Here's why patience remains your greatest asset.",
-      slug: "quiet-power-doing-nothing",
-    },
-    {
-      date: "Mar 2026",
-      title: "Rethinking Retirement in Your Fifties",
-      excerpt:
-        "The decade before retirement is often the most consequential. A framework for the decisions that matter most as the finish line comes into view.",
-      slug: "rethinking-retirement-fifties",
-    },
-    {
-      date: "Feb 2026",
-      title: "What Fiduciary Actually Means",
-      excerpt:
-        "The word gets thrown around carelessly in our industry. Here's what it should mean — and how to tell if your advisor truly operates by it.",
-      slug: "what-fiduciary-means",
-    },
-  ];
+function formatMonthYear(iso: string) {
+  return new Date(iso).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+}
 
+function RecentInsights({ posts }: { posts: RecentPost[] }) {
   return (
     <section className="pt-8 lg:pt-12 pb-14 lg:pb-20 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -249,19 +250,21 @@ function RecentInsights() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {insights.map((insight) => (
-            <article key={insight.slug} className="group">
+          {posts.map((post) => (
+            <article key={post._id} className="group">
               <time className="font-mono text-muted-foreground text-xs tracking-wider block mb-3">
-                {insight.date}
+                {formatMonthYear(post.publishedAt)}
               </time>
               <h3 className="font-serif font-light text-lg lg:text-xl text-ink mb-3 leading-snug tracking-[0.005em] group-hover:text-accent transition-colors">
-                <Link href={`/insights/${insight.slug}`}>{insight.title}</Link>
+                <Link href={`/insights/${post.slug}`}>{post.title}</Link>
               </h3>
-              <p className="text-foreground/70 text-sm leading-relaxed mb-4 line-clamp-2">
-                {insight.excerpt}
-              </p>
+              {post.excerpt && (
+                <p className="text-foreground/70 text-sm leading-relaxed mb-4 line-clamp-2">
+                  {post.excerpt}
+                </p>
+              )}
               <Link
-                href={`/insights/${insight.slug}`}
+                href={`/insights/${post.slug}`}
                 className="inline-flex items-center text-accent hover:text-ink transition-colors text-sm group/link"
               >
                 Read
