@@ -8,17 +8,14 @@ const navItems = [
 ];
 
 const complianceItems = [
+  { label: "Disclosures", href: "/disclosures", external: false },
   {
     label: "CFP® Certification",
     href: "https://www.cfp.net/verify-a-cfp-professional",
     external: true,
   },
-  {
-    label: "Form ADV",
-    href: "https://adviserinfo.sec.gov/firm/summary/307078",
-    external: true,
-  },
-  { label: "Privacy Policy", href: "/disclosures", external: false },
+  { label: "Form ADV", href: "/disclosures#adv", external: false },
+  { label: "Privacy Policy", href: "/disclosures#privacy", external: false },
 ];
 
 export function SiteFooter() {
