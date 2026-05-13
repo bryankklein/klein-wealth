@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
@@ -24,6 +25,15 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           <div>
+            <div className="relative w-12 h-12 mb-4">
+              <Image
+                src="/images/kwm-logo.png"
+                alt="Klein Wealth Management"
+                fill
+                className="object-contain object-left"
+                sizes="48px"
+              />
+            </div>
             <p className="text-xs font-sans tracking-[0.2em] text-ink uppercase mb-4">
               Klein Wealth Management
             </p>
