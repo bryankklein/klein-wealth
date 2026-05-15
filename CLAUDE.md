@@ -6,7 +6,7 @@
 
 A from-scratch rebuild of klein-wealth.com to replace an existing Webflow site. The current site is functional but feels dated, and Webflow makes content updates (especially blog posts and YouTube embeds) more friction than they need to be. The new site lives entirely in code so Bryan can update it himself, learn modern web development, and build a publication-quality site that establishes credibility with prospects.
 
-**Important:** klein-wealth.com is a live business website for Bryan's wealth management practice. The new build runs on a Vercel staging URL until cutover. **Never modify the live klein-wealth.com domain or its DNS until Phase 10.** The existing Webflow site stays online until the new one is fully reviewed and approved.
+**Important:** klein-wealth.com is a live business website for Bryan's wealth management practice. As of Phase 10 (2026-05-15), the site runs on Next.js / Vercel / Sanity / Resend. The legacy Webflow project is unpublished and downgraded but kept in the workspace as a re-publish parachute. Treat any future DNS or production changes with the same caution as the original cutover.
 
 ## About the Developer
 
@@ -49,10 +49,10 @@ Replace klein-wealth.com with a modern editorial site that:
 - **Typography:** Source Serif 4 (headlines) + Inter (body) via `next/font/google`
 - **CMS:** Sanity (free tier, hosted Studio for non-technical blog editing)
 - **Contact form:** Resend (form submission → email to Bryan's inbox)
-- **Hosting:** Vercel (free tier; staging URL until DNS cutover at Phase 10)
+- **Hosting:** Vercel (free tier)
 - **Source:** GitHub at `bryankklein/klein-wealth`
-- **Production URL:** `klein-wealth.com` (currently Webflow; cutover at Phase 10)
-- **Staging URL:** Vercel auto-assigned (likely `klein-wealth.vercel.app`)
+- **Production URL:** `https://www.klein-wealth.com` (apex 301-redirects to www; canonical is www)
+- **Preview URLs:** Vercel auto-generates per-branch preview URLs on push
 
 ## Brand / Design System (locked Phase 0)
 
@@ -91,16 +91,18 @@ If Bryan wants to add or change disclosure language in the new build, he should 
 
 ## Phase Plan
 
+**Rebuild complete — all phases shipped 2026-05-15.**
+
 | Phase | Status | Ships |
 |---|---|---|
 | 0 | DONE | Decisions locked (palette, typography, sitemap, CMS, contact form) |
 | 1 | DONE | Project scaffolded — homepage live on Vercel staging with brand design system applied |
-| **2** | **NEXT** | **Visual mockups generated in v0.dev / Artifacts; pick homepage direction** |
-| 3 | | Homepage built for real |
-| 4 | | Team page (Bryan's bio) |
-| 5 | | Services page |
-| 6 | | Sanity CMS set up; Insights blog system + 1–2 sample posts (with embedded YouTube) |
-| 7 | | Contact form wired to Resend |
-| 8 | | Compliance / Disclosures page (CFP, ADV links, privacy policy ported) |
-| 9 | | Side-by-side review with current klein-wealth.com, content polish |
-| 10 | | DNS cutover — klein-wealth.com points to Vercel; Webflow decommissioned |
+| 2 | DONE | Visual mockups generated; homepage direction picked |
+| 3 | DONE | Homepage built for real |
+| 4 | DONE | Team page (Bryan's bio) |
+| 5 | DONE | Services page |
+| 6 | DONE | Sanity CMS set up; Insights blog system + sample posts (with embedded YouTube) |
+| 7 | DONE | Contact form wired to Resend |
+| 8 | DONE | Compliance / Disclosures page (CFP, ADV links, privacy policy ported) |
+| 9 | DONE | Brand polish, logo, Client Login landing, side-by-side review |
+| 10 | DONE | DNS cutover — klein-wealth.com on Vercel; Webflow unpublished + plan downgraded |
