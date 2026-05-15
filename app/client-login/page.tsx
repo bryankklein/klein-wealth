@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'Sign in to your Charles Schwab account. Klein Wealth Management does not collect or store your Schwab credentials.',
 }
 
-const SCHWAB_LOGIN_URL = 'https://client.schwab.com/login'
+const SCHWAB_LOGIN_URL = 'https://client.schwab.com/'
 
 export default function ClientLoginPage() {
   return (
