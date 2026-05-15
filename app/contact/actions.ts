@@ -4,10 +4,8 @@ import {Resend} from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-// Resend's onboarding sender can only deliver to the account owner's inbox.
-// Phase 10: verify klein-wealth.com in Resend and swap this to bryan@klein-wealth.com.
-const INBOX = 'bryankklein@gmail.com'
-const FROM = 'Klein Wealth Management <onboarding@resend.dev>'
+const INBOX = 'bryan@klein-wealth.com'
+const FROM = 'Klein Wealth Management <contact@klein-wealth.com>'
 
 export type ContactFormState = {
   status: 'idle' | 'success' | 'error'
