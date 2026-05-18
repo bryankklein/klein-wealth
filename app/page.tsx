@@ -61,7 +61,7 @@ function Hero() {
           </h1>
 
           <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-xl mb-10">
-            As a CFP® professional with over 20 years of experience, I provide
+            As a CFP® professional with over 20 years of experience, we provide
             personalized fiduciary financial planning built around your life —
             not products or commissions.
           </p>
