@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
   title: "Team — Klein Wealth Management",
   description:
-    "Meet Bryan Klein, CFP® and Noah Strunk, CFP® — the team behind Klein Wealth Management's fee-only fiduciary financial planning practice.",
+    "Meet Bryan Klein, CFP® — the founder of Klein Wealth Management's fee-only fiduciary financial planning practice.",
 };
 
 export default function TeamPage() {
@@ -17,7 +17,6 @@ export default function TeamPage() {
       <main>
         <PageIntro />
         <PrimaryBio />
-        <SecondaryBio />
         <ClosingCta />
         <ComplianceDisclosure />
       </main>
@@ -102,72 +101,6 @@ function PrimaryBio() {
                 teenage daughters, running, surfing and volunteering for the
                 SIFMA Foundation — which is dedicated to helping students
                 achieve financial literacy.
-              </p>
-            </div>
-
-            <div className="mt-8">
-              <CfpCredentialBadge />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function SecondaryBio() {
-  return (
-    <section className="pt-10 lg:pt-14 pb-6 lg:pb-8 border-t border-border/50">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div className="lg:col-span-3">
-            <div className="relative aspect-[4/5] w-full">
-              <Image
-                src="/images/noah.jpg"
-                alt="Noah Strunk, Wealth Advisor at Klein Wealth Management"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 25vw, 100vw"
-              />
-            </div>
-          </div>
-
-          <div className="lg:col-span-9">
-            <p className="text-accent text-xs tracking-[0.15em] uppercase mb-3">
-              Wealth Advisor, CFP® Professional, MBA
-            </p>
-            <h2 className="font-serif font-light text-2xl lg:text-3xl text-ink mb-6 leading-[1.2] tracking-[0.01em]">
-              Noah Strunk
-            </h2>
-
-            <div className="space-y-4 text-foreground/80 leading-relaxed text-[15px]">
-              <p>
-                Noah&apos;s interest in financial markets began at a young age,
-                inspired by his grandfather. This passion led him to pursue
-                both a BA and MBA in Business/Finance from the University of
-                North Florida. Eager to apply his knowledge in a meaningful
-                way, Noah embarked on a career at Fidelity Investments, where
-                he spent more than 10 years honing his skills. During this
-                time, he earned the CERTIFIED FINANCIAL PLANNER™ (CFP®)
-                designation and developed a deep understanding of not only
-                managing capital but also guiding clients through the
-                emotional aspects of investing.
-              </p>
-              <p>
-                After Fidelity, Noah joined a boutique wealth management firm
-                in South Florida, where he discovered the benefits of building
-                closer, more personalized relationships with clients — an
-                approach that aligned with his desire to foster greater
-                success for them. Motivated by this experience and a strong
-                partnership with Bryan, he joined Klein Wealth Management.
-                Together, they are committed to putting clients&apos;
-                interests first and educating them on the reasoning behind
-                their financial decisions.
-              </p>
-              <p>
-                Outside of work, Noah enjoys spending time with his wife and
-                three young children, playing golf, and traveling in search
-                of the perfect wave.
               </p>
             </div>
 
