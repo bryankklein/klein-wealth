@@ -201,6 +201,9 @@ function PrivacySection() {
         </h2>
 
         <div className="space-y-5 text-foreground/80 leading-relaxed text-[15px]">
+          <p className="text-xs tracking-[0.15em] uppercase text-muted-foreground">
+            Last updated September 20, 2026
+          </p>
           <p>
             Klein Wealth Management, LLC considers the privacy of its clients
             to be of fundamental importance and has established a policy to
@@ -272,6 +275,23 @@ function PrivacySection() {
             password-protected user access to our computer files, training of
             employees, and strict confidentiality policies that apply to all
             employees.
+          </p>
+
+          <h3 className="font-serif font-light text-xl lg:text-2xl text-ink mt-8 mb-3 tracking-[0.01em]">
+            Website visitors
+          </h3>
+          <p>
+            When you visit our website, we may automatically collect limited,
+            non-identifying usage information, such as pages viewed, referring
+            website, device and browser type, and approximate location, using a
+            privacy-focused analytics service. This service does not use
+            cookies and does not track you across other websites. If you
+            contact us through our website form, we collect the information you
+            provide (such as your name, email address, phone number, and
+            message) to respond to your inquiry. We use service providers to
+            host our website and deliver form submissions to us; they are
+            permitted to use your information only to provide those services.
+            We do not sell your information.
           </p>
 
           <h3 className="font-serif font-light text-xl lg:text-2xl text-ink mt-8 mb-3 tracking-[0.01em]">
